@@ -1,0 +1,11 @@
+<cover-l>
+  <div class="container">
+    <stack-sm>
+      <h1>Open Search Books!</h1>
+      <%= form_tag search_books_path, method: :get do %>
+        <%= search_field_tag :search, params[:search], placeholder: "Search books..." %>
+      <% end %>
+      <%= @response.inspect %>
+    </stack-sm>
+  </div>
+</cover-l>

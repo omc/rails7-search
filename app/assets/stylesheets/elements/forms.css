@@ -3,7 +3,7 @@
 */
 
 /* Inputs/Text */
-input[type="text"], input[type="number"], textarea {
+input[type="text"], input[type="number"], textarea, input[type="search"] {
   /* settings */
   --color-input-background: var(--color-light);
   --color-input-border: var(--border-color);

@@ -16,10 +16,8 @@
  *= require typography
  *= require_tree ./elements
  *= require_tree ./components
- *= require_tree ./layouts
  *= require_tree ./every_layout
  *= require ./utilities
- *= require_tree ../../../vendor/stylesheets
  *= require_self
  */
 

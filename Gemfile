@@ -52,6 +52,8 @@ gem "bootsnap", require: false
 # https://github.com/faker-ruby/faker
 gem 'faker'
 
+gem 'opensearch-ruby'
+
 # Linting
 #  Ruby linting, from TestDouble [https://github.com/testdouble/standard]
 gem "standard", group: [:development, :test]
