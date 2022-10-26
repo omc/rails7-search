@@ -17,6 +17,7 @@
  *= require_tree ./elements
  *= require_tree ./components
  *= require_tree ./every_layout
+ *= require_tree ./layouts
  *= require ./utilities
  *= require_self
  */

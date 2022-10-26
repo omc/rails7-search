@@ -1,11 +1,44 @@
-<cover-l>
+<cover-l id="search">
   <div class="container">
     <stack-sm>
       <h1>Open Search Books!</h1>
-      <%= form_tag search_books_path, method: :get do %>
-        <%= search_field_tag :search, params[:search], placeholder: "Search books..." %>
+      <%= form_tag search_books_path, method: :get, data: { controller: 'form-submit' } do %>
+        <%= search_field_tag :search, params[:search], placeholder: "Search books...", data: { action: "input->form-submit#change" } %>
       <% end %>
-      <%= @response.inspect %>
+      <% if @response.present? %>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Author</th>
+              <th>Published</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @response.dig("hits", "hits").each do |hit| %>
+              <tr>
+                <td>
+                  <%= link_to hit.dig("_source", "name"), "/books/#{hit["_id"]}" %>
+                </td>
+                <td><%= hit.dig("_source", "author") %></td>
+                <td><%= hit.dig("_source", "published_at") %></td>
+              </tr>
+              <% if hit.dig("highlight").present? %>
+                <tr>
+                  <td colspan="3">
+                    <small>
+                      <% hit.dig("highlight", "description").each do |hightlight| %>
+                        <%= sanitize hightlight %>
+                      <% end %>
+
+                    </small>
+                  </td>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
     </stack-sm>
   </div>
 </cover-l>

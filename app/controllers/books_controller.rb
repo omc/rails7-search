@@ -24,6 +24,11 @@ class BooksController < ApplicationController
           'query': q,
           'fields': ['name', 'publisher', 'description', 'genre', 'author']
         }
+      },
+      "highlight": {
+        "fields": {
+          "description": {}
+        }
       }
     }
   end
