@@ -1,0 +1,146 @@
+button,
+.button,
+input[type="submit"],
+input[type="file"] {
+  /* CSS Variable Settings */
+  --button-background-color: var(--color-white);
+  --button-color: var(--color-primary);
+  --button-background-hover-color: var(--color-light);
+
+  background: var(--button-background-color);
+  border: var(--border-sm) solid var(--button-color);
+  color: var(--button-color);
+
+  /* Defaults */
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding: var(--s-2);
+  text-align: center;
+  vertical-align: middle;
+}
+
+button:hover,
+.button:hover {
+  background: var(--button-background-hover-color);
+}
+
+button.primary,
+.button.primary {
+  --button-background-color: var(--color-primary);
+  --button-color: var(--color-primary);
+  --button-background-hover-color: var(--color-primary-dark);
+}
+
+button.secondary,
+.button.secondary,
+button[type="submit"].secondary,
+input[type="file"] {
+  --button-background-color: var(--color-white);
+  --button-color: var(--color-primary);
+  --button-background-hover-color: var(--color-secondary);
+}
+
+button.dark {
+  --button-background-color: var(--color-dark);
+  --button-color: var(--color-light);
+  --button-background-hover-color: var(--color-dark);
+}
+
+/* TODO: use css vars instead of strict settings */
+button[type="submit"],
+input[type="submit"] {
+  --button-background-color: var(--color-success);
+  --button-color: var(--color-light);
+  --button-background-hover-color: var(--color-success-dark);
+}
+
+button[type="submit"].info {
+  --button-background-color: var(--color-info);
+  --button-color: var(--color-light);
+  --button-background-hover-color: var(--color-info-dark);
+}
+
+button[type="submit"].warning {
+  --button-background-color: var(--color-warning);
+  --button-color: var(--color-light);
+  --button-background-hover-color: var(--color-warning-dark);
+}
+
+button[type="submit"].error {
+  --button-background-color: var(--color-error);
+  --button-color: var(--color-light);
+  --button-background-hover-color: var(--color-error-dark);
+}
+
+/* Button Sizes */
+button.sm {
+  font-size: var(--font-size-sm);
+  padding: var(--s-3);
+}
+
+/* Button States */
+button[disabled="disabled"] {
+  opacity: 0.5;
+}
+
+/*
+  Text Buttons
+
+*/
+button.button-text,
+.button-text {
+  background: none;
+  border: none;
+  /* min-width: 5ch; */
+  /* causing whitespace artifacts in a compact cluster-l of single-char button links */
+  text-decoration: underline;
+  text-underline-position: under;
+  padding: 0;
+
+  --button-background-color: transparent;
+  --button-color: var(--color-info);
+  --button-background-hover-color: var(--color-info-dark);
+}
+
+button.button-text:hover,
+.button-text:hover {
+  background: none;
+  border: none;
+}
+
+button.button-text>*,
+.button-text>* {
+  color: var(--button-color);
+}
+
+button.button-text:hover>*,
+.button-text:hover>* {
+  color: var(--button-background-hover-color);
+}
+
+button.button-text.danger {
+  --button-background-color: transparent;
+  --button-color: var(--color-danger);
+  --button-background-hover-color: var(--color-danger-dark);
+}
+
+.button-group button.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.button-group>button:first-child {
+  margin-right: 0;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.button-group>button+button {
+  margin-left: 0;
+  border-left: 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}

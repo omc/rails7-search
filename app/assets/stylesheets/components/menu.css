@@ -1,0 +1,33 @@
+menu {
+  /* variables */
+  --menu-hover-background-color: var(--color-info-lightest);
+  --menu-hover-color: var(--color-bright);
+
+  /* defaults */
+  min-width: calc(var(--measure) / 3);
+  list-style: none;
+}
+
+menu li {
+  text-decoration: none;
+  user-select: none;
+}
+
+menu li > a  {
+  border-radius: var(--border-radius);
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: var(--s-2);
+}
+
+menu li > a:hover, menu li > a.active {
+  cursor: pointer;
+  background: var(--menu-hover-background-color);
+  color: var(--menu-hover-color);
+}
+
+menu.brand {
+  --menu-hover-background-color: #317d4f;
+  --menu-hover-color: #68ffa4;
+}

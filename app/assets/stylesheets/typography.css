@@ -1,0 +1,55 @@
+:root {
+  line-height: var(--s0);
+  font-size: var(--font-size);
+  font-family: var(--font-body);
+  /* background-color: var(--color-light); */
+  color: var(--font-color);
+  font-weight: var(--font-weight);
+
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: inherit;
+  font-weight: 600;
+  letter-spacing: 0.03ch;
+  line-height: var(--line-height);
+}
+
+ul,
+menu {
+  padding: unset;
+  margin: unset;
+}
+
+ul.unstyled {
+  list-style: none;
+}
+
+i {
+  color: var(--color-muted);
+}
+
+hr {
+  height: var(--border-thin);
+  background: var(--color-lightish);
+  border: none;
+  margin: inherit;
+}

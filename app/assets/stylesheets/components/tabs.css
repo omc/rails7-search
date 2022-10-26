@@ -1,0 +1,28 @@
+ul.tabs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: var(--border-thin) solid var(--color-lightish);
+}
+
+ul.tabs > li {
+  margin-top: 0;
+}
+ul.tabs > li > a {
+  border-bottom: var(--border-thick) solid transparent;
+  color: inherit;
+  display: block;
+  margin: 0 var(--s-2) 0 0;
+  padding: var(--s-3) var(--s-3) calc(var(--s-3) - var(--border-thick)) var(--s-3);
+  text-decoration: none;
+}
+ul.tabs > li > a:focus, ul.tabs > li > a:hover {
+  cursor: pointer;
+  color: var(--link-color);
+}
+
+ul.tabs > li.active > a {
+  border-bottom-color: var(--link-color);
+  color: var(--link-color);
+}

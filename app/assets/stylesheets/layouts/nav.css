@@ -1,0 +1,8 @@
+nav {
+  padding: var(--s-2);
+}
+
+svg.sidenav-openButton {
+  padding: calc(var(--s1) / 2);
+  margin: 0;
+}

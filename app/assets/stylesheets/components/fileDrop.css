@@ -1,0 +1,22 @@
+.fileDrop {
+  width: -webkit-fill-available;
+  min-height: unset;
+  margin: none;
+}
+
+.fileDrop {
+  min-height: 150px;
+  border: var(--border-thick) dashed var(--color-lightish);
+  background: #fff;
+  padding: var(--s0);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.fileDrop label {
+  cursor: pointer;
+}
+
+.fileDrop.active {
+  border-color: var(--color-primary);
+}

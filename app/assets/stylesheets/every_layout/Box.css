@@ -1,0 +1,10 @@
+box-l {
+  background: var(--background-color);
+  display: block;
+  padding: var(--s0);
+  outline: var(--border-thin) solid transparent;
+  outline-offset: calc(var(--border-thin) * -1);
+
+  box-shadow: 0 var(--s-3) var(--s0) 0 rgb(0 0 0 / 16%);
+  border-radius: var(--border-radius);
+}

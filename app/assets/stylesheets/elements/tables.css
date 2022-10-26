@@ -1,0 +1,31 @@
+td,
+th {
+  border-bottom: var(--border-thin) solid var(--color-lightish);
+  padding: var(--s-1) var(--s-1);
+}
+
+th {
+  border-bottom-width: var(--border-thin);
+  font-weight: 600;
+  color: var(--color-grey);
+  font-variant: small-caps;
+  text-transform: uppercase;
+  font-size: var(--s-1);
+  letter-spacing: calc(var(--s-7) / 2);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+  background-color: inherit;
+}
+
+thead {
+  background-color: #f8fafc;
+}
+
+tfoot {
+  border-top: var(--border-thin) solid var(--color-lightish);
+}

@@ -1,0 +1,28 @@
+figure.avatar {
+  --avatar-background: var(--color-light-grey);
+  --avatar-color: var(--color-light);
+  --size: var(--s2);
+
+  font-size: calc(var(--size) / 2);
+  height: var(--size);
+  width: var(--size);
+
+  background: var(--avatar-background);
+  color: var(--avatar-color);
+
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0;
+}
+
+figure.avatar img {
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,203 @@
+/*
+  SCALE
+    Our ruler that sets measurements and intervals for consistent
+    vertical and horizontal rhythm throughout the design.
+
+  @usage
+    .my-component {
+      width: var(--s0);
+    }
+*/
+:root {
+  --ratio: 1.35;
+  --s-7: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio) / var(--ratio) / var(--ratio)
+  );
+  --s-6: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio) / var(--ratio)
+  );
+  --s-5: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio) /
+      var(--ratio)
+  );
+  --s-4: calc(
+    var(--s0) / var(--ratio) / var(--ratio) / var(--ratio) / var(--ratio)
+  );
+  --s-3: calc(var(--s0) / var(--ratio) / var(--ratio) / var(--ratio));
+  --s-2: calc(var(--s0) / var(--ratio) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s0) * var(--ratio) * var(--ratio));
+  --s3: calc(var(--s0) * var(--ratio) * var(--ratio) * var(--ratio));
+  --s4: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio)
+  );
+  --s5: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio)
+  );
+  --s6: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio) * var(--ratio)
+  );
+  --s7: calc(
+    var(--s0) * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio) *
+      var(--ratio) * var(--ratio) * var(--ratio)
+  );
+}
+
+/*
+  COLORS
+
+  All the colors!
+
+  @usage
+  .label-primary {
+    color: var(--color-primary);
+  }
+*/
+
+:root {
+  /*
+    Palette
+
+    Our base palette we work with.
+  */
+  --color-dark: #454d5d;
+  --color-darkish: #5a6269;
+  --color-lightish: #e8ebee;
+  --color-light: #f5f8fa;
+  --color-lightest: #fff;
+  --color-mid: hsl(0, 0%, 50%);
+  --color-blue: #259ac4;
+  --color-bright: #259ac4;
+  --color-light-blue: #e8f7fe;
+  --color-green: #59b27d;
+  --color-indigo: #244260;
+  --color-grey: #939da8;
+  --color-light-grey: #caced7;
+  --color-red: #ec2c4c;
+  --color-orange: #eb6a39;
+  --color-yelow: #ebcd39;
+
+  /*
+    Brand Colors
+
+    The colors of "bonsai" as a brand. For use in logos and sections
+    where we want to reinforce a sense of who we are.
+  */
+  --color-brand: #68bd90;
+  --color-brand-secondary: #317d4f;
+  --color-brand-dark: #204345;
+  --color-brand-light: #e4f3ea;
+
+  /*
+    System Colors
+
+    These colors are the app workhorses. They imbue meaning and provide context,
+    giving feedback to users, visual cues for what to do next, and provide glaring
+    signs for status, error, and success states.
+
+    When they are used in components, their name should map to the intent and context
+    of the component. For example, if clicking a certain button is a "dangerous" action,
+    the class name and system color used in that class should mirror that context.
+
+    @usage
+
+    button.danger {
+      background-color: var(--color-danger);
+    }
+  */
+
+  --color-primary: var(--color-bright);
+  --color-secondary: var(--color-light-blue);
+
+  --color-info: var(--color-blue);
+  --color-info-bright: var(--color-bright);
+  --color-info-dark: #1c7798;
+  --color-info-light: var(--color-light-blue);
+  --color-info-lightest: #cfe7f0;
+
+  --color-success: var(--color-green);
+  --color-success-dark: #4ea873;
+  --color-success-light: #e8f7ee;
+
+  --color-error: var(--color-red);
+  --color-error-dark: #92182d;
+  --color-error-light: #ffdee4;
+  --color-error-light-1: #fff7f7;
+
+  --color-danger: var(--color-red);
+  --color-danger-dark: #92182d;
+  --color-danger-light: #ffdee4;
+
+  --color-warning: #ebcd39;
+  --color-warning-dark: #ab9628;
+  --color-warning-light: #fffbe5;
+
+  --color-muted: var(--color-mid);
+}
+
+/*
+  FONTS & type
+*/
+
+:root {
+  --font-body: "Helvetica Neue", Helvetica, sans-serif;
+  --font-mono: Menlo, Courier, Courier New, Andale Mono, monospace;
+  --font-weight: 400;
+  --font-color: var(var(--color-dark));
+
+  --line-height: var(--ratio);
+
+  --font-size: calc(0.02vw + 1em);
+  --font-size-sm: calc(0.01vw + 1em);
+  --font-size-lg: calc(0.03vw + 1em);
+  --icon-size: 1em;
+
+  --link-color: var(--color-bright);
+}
+
+/*
+  Theme
+
+*/
+
+:root {
+  --background-color: var(--color-lightest);
+}
+
+/*
+  Common Element Settings
+
+
+*/
+
+:root {
+  --control-size: var(--s2);
+
+  --border-sm: calc(var(--s-7) / var(--ratio));
+  --border-thin: var(--s-7);
+  --border-thick: var(--s-6);
+
+  --border-radius: var(--s-6);
+
+  --border-color: #b1bac3;
+
+  --measure: 65ch;
+}
+
+
+/*
+  Positioning Settings
+
+*/
+
+:root {
+  --z0: 0;
+  --z1: 10;
+  --z2: 20;
+}

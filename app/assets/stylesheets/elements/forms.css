@@ -1,0 +1,94 @@
+/*
+  Form Elements
+*/
+
+/* Inputs/Text */
+input[type="text"], input[type="number"], textarea {
+  /* settings */
+  --color-input-background: var(--color-light);
+  --color-input-border: var(--border-color);
+
+  /* attrs that depend on settings */
+  background: var(--color-input-background);
+  border: var(--border-sm) solid var(--color-input-border);
+
+  /* defaults */
+  width: -webkit-fill-available;
+  background-image: none;
+  border-radius: var(--border-radius);
+  color: var(--color-dark);
+  display: block;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  outline: none;
+  padding: var(--s-3) var(--s-2);
+}
+
+/* Forms/Labels */
+form label {
+  font-weight: 500;
+}
+
+/* Forms/Selects */
+select {
+  border: var(--border-sm) solid var(--border-color);
+  border-radius: var(--border-radius);
+
+  color: var(--color-dark);
+  display: block;
+  width: 100%;
+  padding: var(--s-3) var(--s0) var(--s-3) var(--s-2);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+
+  height: 2.2rem;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+
+  background: var(--color-light)
+    url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E")
+    no-repeat right 0.35rem center/.4rem 0.5rem;
+}
+
+/* Forms/Radio Buttons */
+input[type="radio"],
+input[type="radio"] + label:hover {
+  cursor: pointer;
+}
+
+/*
+  Form States
+
+
+*/
+
+/* Focus */
+input[type="text"]:focus {
+  --color-input-border: var(--color-bright);
+  /* TODO: box shadow? */
+}
+
+/* disabled states */
+input.disabled,
+*[disabled="true"] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Error states */
+.field_with_errors input[type="text"] {
+  --color-input-background: var(--color-error-light-1);
+  --color-input-border: var(--color-error);
+}
+
+/* the hint */
+p.hint {
+  color: var(--color-error);
+  margin-bottom: unset;
+  margin-top: var(--s-4);
+}

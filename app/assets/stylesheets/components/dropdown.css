@@ -1,0 +1,28 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown > .dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown.dropdown-right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-menu {
+  z-index: 2000;
+  animation: slide-down 0.15s ease 1;
+  left: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+}
+
+.dropdown-menu hr {
+  margin-left: calc(-1 * var(--s0));
+  margin-right: calc(-1 * var(--s0));
+  /* margin-bottom: var(--s0); */
+}

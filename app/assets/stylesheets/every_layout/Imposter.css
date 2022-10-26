@@ -1,0 +1,10 @@
+imposter-l {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  min-width: -webkit-fill-available;
+  z-index: var(--z2);
+  /* by default, the modal is hidden */
+  display: none;
+}

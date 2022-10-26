@@ -1,0 +1,24 @@
+.label {
+  --label-background: var(--color-lightish);
+  --label-color: var(--color-muted);
+
+  background-color: var(--label-background);
+  color: var(--label-color);
+  padding: var(--s-3) var(--s-1);
+  border-radius: 1em;
+}
+
+.label.label-success {
+  --label-background: var(--color-success-light);
+  --label-color: var(--color-success);
+}
+
+.label.label-info {
+  --label-background: var(--color-info-light);
+  --label-color: var(--color-info);
+}
+
+.label.label-warning {
+  --label-background: var(--color-warning-light);
+  --label-color: var(--color-warning-dark);
+}

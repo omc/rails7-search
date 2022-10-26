@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ * require normalize
+ * # require_tree ./fonts
+ *= require settings
+ *= require typography
+ *= require_tree ./elements
+ *= require_tree ./components
+ *= require_tree ./layouts
+ *= require_tree ./every_layout
+ *= require ./utilities
+ *= require_tree ../../../vendor/stylesheets
+ *= require_self
+ */
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 var(--s0);
+}
+
+/* main account layout with sidebar */
+body>switcher-l>div {
+  min-height: 100vh;
+}
+
+switcher-l aside {
+  max-width: min-content;
+}
+
+.logo {
+  width: 6ch;
+}
+
+.vault {
+  border: var(--border-thick) solid var(--color-grey);
+  padding: var(--s0)
+}
+
+.space {
+  border: var(--border-thick) solid var(--color-primary);
+  padding: var(--s0);
+}

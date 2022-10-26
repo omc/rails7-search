@@ -1,0 +1,13 @@
+stack-l, .stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+stack-l > * + *, .stack > * + * {
+  margin-top: var(--s1);
+}
+
+stack-sm > * + * {
+  margin-top: var(--s-1);
+}

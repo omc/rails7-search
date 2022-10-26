@@ -1,0 +1,8 @@
+sidebar-l > * {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+sidebar-l > * > * {
+  flex-grow: 1;
+}

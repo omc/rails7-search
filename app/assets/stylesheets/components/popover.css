@@ -1,0 +1,67 @@
+
+.popover {
+  display: inline-block;
+  position: relative;
+  font-size: initial;
+  font-weight: initial;
+}
+
+.popover .popover-container {
+  left: 50%;
+  opacity: 0;
+  padding: var(--s0);
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s ease;
+  width: calc(var(--measure) / 1.5);
+  z-index: 100;
+}
+
+.popover *:focus + .popover-container, .popover:hover .popover-container, .popover .popover-container:hover {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -100%) scale(1);
+}
+
+.popover.popover-right .popover-container {
+  left: 100%;
+  top: 50%;
+}
+
+.popover.popover-right :focus + .popover-container, .popover.popover-right:hover .popover-container, .popover.popover-right .popover-container:hover {
+  transform: translate(0, -50%) scale(1);
+}
+
+.popover.popover-bottom .popover-container {
+  left: 50%;
+  top: 100%;
+}
+
+.popover.popover-bottom :focus + .popover-container, .popover.popover-bottom:hover .popover-container, .popover.popover-bottom .popover-container:hover {
+  transform: translate(-50%, 0) scale(1);
+}
+
+.popover.popover-left .popover-container {
+  left: 0;
+  top: 50%;
+}
+
+.popover.popover-left :focus + .popover-container, .popover.popover-left:hover .popover-container, .popover.popover-left .popover-container:hover {
+  transform: translate(-100%, -50%) scale(1);
+}
+
+.popover.popover-right-bottom :focus + .popover-container, .popover.popover-right-bottom:hover .popover-container, .popover.popover-right-bottom .popover-container:hover {
+  transform: translate(0, -20%) scale(1);
+  left: 100%;
+  top: 50%;
+  display: block;
+  opacity: 1;
+}
+
+.popover.popover-left-bottom :focus + .popover-container, .popover.popover-left-bottom:hover .popover-container, .popover.popover-left-bottom .popover-container:hover {
+  transform: translate(-100%, 0%) scale(1);
+  top: 100%;
+  display: block;
+  opacity: 1;
+}

@@ -1,0 +1,53 @@
+/*
+  ALERTS
+
+  Alerts, or toasts, are components we use to message users on status of their actions,
+  or warn them about something.
+
+  @variants
+  .alert.alert-info
+  .alert.alert-error
+  .alert.alert-warning
+  .alert.alert-success
+
+  @usage
+
+  Alerts should be used as a class on a box-l component.
+
+  <box-l class="alert alert-error">
+    # content
+  </box-l>
+
+*/
+
+.alert {
+  box-shadow: 0 var(--s-3) var(--s0) 0 rgb(0 0 0 / 1%);
+  --color-background: var(--color-info-light);
+  --color: var(--color-info);
+  --color-border: var(--color-info);
+
+  background: var(--color-background);
+  border: var(--border-thin) solid var(--color-border);
+  color: var(--color);
+}
+.alert i {
+  color: var(--color);
+}
+
+.alert.alert-warning {
+  --color-background: var(--color-warning-light);
+  --color: var(--color-warning-dark);
+  --color-border: var(--color-warning);
+}
+
+.alert.alert-error {
+  --color-background: var(--color-error-light);
+  --color: var(--color-error);
+  --color-border: var(--color-error);
+}
+
+.alert.alert-success {
+  --color-background: var(--color-success-light);
+  --color: var(--color-success-dark);
+  --color-border: var(--color-success);
+}
