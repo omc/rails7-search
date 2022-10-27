@@ -1,0 +1,23 @@
+<%= turbo_stream.update @target do %>
+  <% @response.dig("hits", "hits").each do |hit| %>
+    <li>
+      <stack-sm>
+        <div>
+          <%= link_to hit.dig("_source", "name"), "/books/#{hit.dig("_id")}" %>
+          <span>by <%= hit.dig("_source", "author") %>, </span>
+          <span><%= hit.dig("_source", "published_at") %></span>
+        </div>
+
+        <% if hit.dig("highlight").present? %>
+          <div class="color:muted">
+            <small>
+              <% hit.dig("highlight", "description").each do |hightlight| %>
+                <%= sanitize hightlight %>
+              <% end %>
+            </small>
+          </div>
+        <% end %>
+      </stack-sm>
+    </li>
+  <% end %>
+<% end %>

@@ -1,0 +1,16 @@
+<nav>
+  <%= link_to 'Book Search', root_path %>
+</nav>
+<stack-l class="container">
+  <h1><%= @book.name %></h1>
+  <stack-l recursive>
+    <ul class="unstyled">
+      <li>
+        By <%= @book.author.name %>
+      </li>
+      <li>
+        Published <%= @book.published_at %>
+      </li>
+    </ul>
+  </stack-l>
+</stack-l>

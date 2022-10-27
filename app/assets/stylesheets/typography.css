@@ -1,5 +1,5 @@
 :root {
-  line-height: var(--s0);
+  line-height: var(--line-height);
   font-size: var(--font-size);
   font-family: var(--font-body);
   /* background-color: var(--color-light); */

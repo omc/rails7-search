@@ -1,3 +1,7 @@
 #search em {
   background-color: var(--color-warning);
 }
+
+tr.result td {
+  border-bottom: none;
+}

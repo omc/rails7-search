@@ -27,6 +27,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Encapsulates the logic to send by default some headers that are required by rails applications like the X-CSRF-Token. [https://github.com/rails/requestjs-rails]
+gem "requestjs-rails"
+
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 

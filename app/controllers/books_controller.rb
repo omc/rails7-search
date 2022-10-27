@@ -4,14 +4,21 @@ class BooksController < ApplicationController
   end
 
   def search
-    if params[:search].present?
+    @target = params[:target]
+    if params[:q].present?
       @response = OpenSearchClient.search(
-        body: query(params[:search]).to_json,
+        body: query(params[:q]).to_json,
         index: 'books'
       )
     end
-    render :index
+    respond_to do |format|
+      format.turbo_stream
+      format.html { render :index }
+    end
+  end
 
+  def show
+    @book = Book.find_by(id: params[:id])
   end
 
   private
