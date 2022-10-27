@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
+  include SearchModel
   belongs_to :author
   belongs_to :genre
 
